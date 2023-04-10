@@ -1,5 +1,7 @@
 import React from 'react';
 import Cart from './Cart';
+import heroImg from '../assets/hardy.png'
+import Jobs from './Jobs';
 
 const Home = () => {
     return (
@@ -14,7 +16,7 @@ const Home = () => {
                         <button className='bg-indigo-500 p-3 rounded-lg text-white'>Get Started</button>
                     </div>
                     <div>
-                        <img className='' src="../../public/hardy.png" alt="" />
+                        <img className='' src={heroImg} alt="" />
                     </div>
                 </div>
             </div>
@@ -23,6 +25,7 @@ const Home = () => {
 
             <div>
             <Cart></Cart>
+            <Jobs></Jobs>
             </div>
         </div>
     );
