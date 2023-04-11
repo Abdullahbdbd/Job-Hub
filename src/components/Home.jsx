@@ -2,6 +2,7 @@ import React from 'react';
 import Cart from './Cart';
 import heroImg from '../assets/hardy.png'
 import Jobs from './Jobs';
+import JobDetails from './JobDetails';
 
 const Home = () => {
     return (
