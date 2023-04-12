@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { json, useLoaderData, useParams } from 'react-router-dom';
 import { addToDb } from '../utilities/fakedb';
 import AppliedJobs from './AppliedJobs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faCircleDollarToSlot, faCalendarDays, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const JobDetails = () => {
     const jobId = useParams()
@@ -48,14 +50,24 @@ const JobDetails = () => {
                     <div className='bg-indigo-50 p-5 rounded-lg'>
                         <h1 className='font-bold mb-3'>Job Details</h1>
                         <hr />
-                        <h1 className='mt-3'><span className='font-semibold'>Salary : </span>{job.salary} (Per Month)</h1>
-                        <h1 className='mt-2'><span className='font-semibold'>Job Title : </span>{job.jobtitle}</h1>
+                        <h1 className='mt-3'><span className='font-semibold'>
+                        <FontAwesomeIcon icon={faCircleDollarToSlot} />
+                            Salary : </span>{job.salary} (Per Month)</h1>
+                        <h1 className='mt-2'><span className='font-semibold'>
+                        <FontAwesomeIcon icon={faCalendarDays} />
+                            Job Title : </span>{job.jobtitle}</h1>
 
                         <h1 className='font-bold mt-5 mb-3'>Contact Information</h1>
                         <hr />
-                        <h1 className='mt-3'><span className='font-semibold'>Phone : </span>{job.phone}</h1>
-                        <h1 className='mt-3'><span className='font-semibold'>Email : </span>{job.email}</h1>
-                        <h1 className='mt-3'><span className='font-semibold'>Address : </span>{job.location}</h1>
+                        <h1 className='mt-3'><span className='font-semibold'>
+                        <FontAwesomeIcon icon={faPhone} />
+                            Phone : </span>{job.phone}</h1>
+                        <h1 className='mt-3'><span className='font-semibold'>
+                        <FontAwesomeIcon icon={faEnvelope} />
+                            Email : </span>{job.email}</h1>
+                        <h1 className='mt-3'><span className='font-semibold'>
+                        <FontAwesomeIcon icon={faLocationDot} />
+                            Address : </span>{job.location}</h1>
 
                     </div>
                     <button onClick={() => handleApplyBtn(job)} className='text-white font-semibold p-2 px-2 border-solid border-2 border-indigo-300 rounded-lg text-sm mt-3 bg-violet-400

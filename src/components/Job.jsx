@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faCircleDollarToSlot } from '@fortawesome/free-solid-svg-icons'
+
 
 const Job = ({ job }) => {
     return (
@@ -13,9 +16,21 @@ const Job = ({ job }) => {
                 <h2 className='text-indigo-400 font-semibold p-1 px-2 border-solid border-2 border-indigo-300 rounded-sm text-sm'>{job.fulltimePartTime}</h2>
             </div>
 
-            <div className='flex space-x-4 font-semibold'>
-                <h2>{job.location}</h2>
-                <h2>Salary : {job.salary}</h2>
+            <div className='flex space-x-5 font-semibold'>
+               <div className='flex space-x-2'>
+               <p> <FontAwesomeIcon icon={faLocationDot} /></p>
+                <h2>
+
+                    {job.location}
+                </h2>
+               </div>
+
+                <div className='flex space-x-2'>
+                <p> <FontAwesomeIcon icon={faCircleDollarToSlot} /></p>
+                <h2>
+                    Salary : {job.salary}
+                </h2>
+                </div>
             </div>
             <Link to={`/${job.id}`}>
                 <button className='text-white font-semibold p-2 px-2 border-solid border-2 border-indigo-300 rounded-lg text-sm mt-3 bg-violet-400
