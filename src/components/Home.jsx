@@ -17,7 +17,7 @@ const Home = () => {
                         <button className='bg-indigo-500 p-3 rounded-lg text-white'>Get Started</button>
                     </div>
                     <div>
-                        <img className='' src={heroImg} alt="" />
+                        <img src={heroImg} alt="" />
                     </div>
                 </div>
             </div>

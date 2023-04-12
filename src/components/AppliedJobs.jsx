@@ -1,6 +1,10 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import ReviewItem from './ReviewItem';
 
 const AppliedJobs = () => {
+
+const jobs = useLoaderData()
 
     return (
         <div>
@@ -9,8 +13,13 @@ const AppliedJobs = () => {
             </div>
 
 
-            <div>
-                
+            <div className='m-40'>
+                {
+                    jobs.map(job=> <ReviewItem
+                    key={job.id}
+                    job={job}
+                    ></ReviewItem>)
+                }
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { json, useLoaderData, useParams } from 'react-router-dom';
 import { addToDb } from '../utilities/fakedb';
+import AppliedJobs from './AppliedJobs';
 
 const JobDetails = () => {
     const jobId = useParams()
@@ -23,7 +24,8 @@ const JobDetails = () => {
     }
 
     return (
-        <div>
+       
+         <div>
             <div>
                 <h1 className='text-5xl font-bold text-center bg-indigo-50 p-10 w-full'>Job Details </h1>
             </div>
@@ -62,6 +64,9 @@ const JobDetails = () => {
             </div>
 
         </div>
+
+        
+       
     );
 };
 
