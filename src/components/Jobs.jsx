@@ -5,7 +5,6 @@ import Job from './Job';
 const Jobs = () => {
     const jobsData = useLoaderData()
     
-
     return (
         <div>
             <div className='text-center my-20 space-y-4  '>
@@ -15,7 +14,7 @@ const Jobs = () => {
 
             <div className='lg:container'>
 
-                <div className='grid gap-6 mb-8 lg:grid-cols-2 sm:grid-cols-1 mx-52'>
+                <div className='grid gap-6 mb-8 lg:grid-cols-2 sm:grid-cols-1 mx-20 lg:mx-52'>
 
                     {
                         jobsData.map(job =>
